@@ -11,7 +11,7 @@ Ext.define(
   {
     extend: "Ext.tab.Panel",
 
-    // TODO: WHERE IS app-main comming from or where is it defined ?
+    // TODO: NOT SURE BUT THIS WOULD BE LIKE ALIAS NAME
     xtype: "app-main",
 
     // this classes are imported
@@ -24,6 +24,8 @@ Ext.define(
       "Sencha.app.view.main.MainModel",
       /// for grid list
       "Sencha.app.view.main.List",
+      //
+      "Sencha.app.view.main.Tree",
     ],
 
     // here we have to specify the alias name with that name the controller will be instatiated
@@ -116,12 +118,19 @@ Ext.define(
         ],
       },
       {
-        title: "Users",
+        title: "Tree",
         iconCls: "fa-user",
         //if we want to use bind
-        bind: {
-          html: "{loremIpsum}",
-        },
+        // bind: {
+        //   html: "{loremIpsum}",
+        // },
+
+        items: [
+          {
+            // in back its searching for widget.mainlist so weather it's a alias or class
+            xtype: "tree",
+          },
+        ],
       },
       {
         title: "Groups",

@@ -9,11 +9,14 @@ Ext.define("Sencha.app.view.main.List", {
   xtype: "mainlist",
   // alias: "widget.mainlist",
 
+  // for usage of store we are importing it
   requires: ["Sencha.app.store.Personnel"],
 
+  // title of the grid panel
   title: "Personnel",
 
   store: {
+    // we have to provide alias name of store we need to use
     type: "personnel",
   },
 
